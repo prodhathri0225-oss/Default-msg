@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Will You Be Mine? ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(to right, #ff6a88, #ff99ac);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+
+        h1 {
+            margin-top: 100px;
+            font-size: 45px;
+        }
+
+        p {
+            font-size: 20px;
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            position: absolute;
+            transition: 0.2s;
+        }
+
+        #yes {
+            background: white;
+            color: #ff4b7d;
+            left: 40%;
+            top: 60%;
+        }
+
+        #no {
+            background: black;
+            color: white;
+            left: 55%;
+            top: 60%;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Indha sumaar moonji oda andha sooper moonji kadaisi varaikum kuda irukumaa? ❤️</h1>
+
+<p>
+    Unnudaiya kaiyaalae thandanaiyai thanthalae<br>
+	En nenjam kondadumae ✨<br>
+   Kannaththil adikkumadi.. muththathalae vendummadi..<br>
+	Mathathellam unnudaiya ithazhgalin ishtapadi..✨<br>
+   Entha desam ponabothum ennudaiya sontha desam<br>
+	Unathu idhayam thaanae..✨❤️
+</p>
+
+<button id="yes" class="btn" onclick="yesClicked()">Yes ❤️</button>
+<button id="no" class="btn" onmouseover="runAway()">No 😢</button>
+
+<script>
+function yesClicked() {
+    window.location.href = "sorry.html";
+}
+
+function runAway() {
+    var noBtn = document.getElementById("no");
+
+    var maxX = window.innerWidth - noBtn.offsetWidth;
+    var maxY = window.innerHeight - noBtn.offsetHeight;
+
+    var randomX = Math.floor(Math.random() * maxX);
+    var randomY = Math.floor(Math.random() * maxY);
+
+    noBtn.style.left = randomX + "px";
+    noBtn.style.top = randomY + "px";
+}
+</script>
+
+</body>
+</html>
